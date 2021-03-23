@@ -7,6 +7,11 @@
         "guzzlehttp/guzzle": "7.0",
         "vlucas/phpdotenv": "^5.3"
     },
+    "autoload": {
+        "files": [
+            "helpers.php"
+        ]
+    },
     "scripts": {
         "post-install-cmd": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
