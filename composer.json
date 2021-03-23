@@ -3,6 +3,7 @@
     "description": "Kledo OAuth2 Demo App for PHP",
     "type": "project",
     "require": {
+        "php": "^7.4",
         "guzzlehttp/guzzle": "7.0"
     }
 }
