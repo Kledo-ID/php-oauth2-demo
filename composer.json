@@ -1,5 +1,8 @@
 {
     "name": "kledo/oauth2-app",
     "description": "Kledo OAuth2 Demo App for PHP",
-    "type": "project"
+    "type": "project",
+    "require": {
+        "guzzlehttp/guzzle": "7.0"
+    }
 }
