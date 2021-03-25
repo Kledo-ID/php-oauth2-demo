@@ -1,5 +1,7 @@
 <?php
 
+use Josantonius\Session\Session;
+
 if (! function_exists('random_string')) {
     /**
      * Generate a more truly "random" alpha-numeric string.
@@ -21,5 +23,17 @@ if (! function_exists('random_string')) {
         }
 
         return $string;
+    }
+}
+
+if (! function_exists('set_token')) {
+    function set_token($tokenType, $accessToken, $refreshToken, $expiresIn)
+    {
+        Session::set('oauth2', [
+            'token_type' => $tokenType,
+            'access_token' => $accessToken,
+            'refresh_token' => $refreshToken,
+            'expires_in' => $expiresIn,
+        ]);
     }
 }
