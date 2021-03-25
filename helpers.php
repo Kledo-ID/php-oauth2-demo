@@ -27,6 +27,15 @@ if (! function_exists('random_string')) {
 }
 
 if (! function_exists('set_token')) {
+    /**
+     * Store token details to session.
+     *
+     * @param  string  $tokenType
+     * @param  string  $accessToken
+     * @param  string  $refreshToken
+     * @param  string  $expiresIn
+     * @return void
+     */
     function set_token($tokenType, $accessToken, $refreshToken, $expiresIn)
     {
         Session::set('oauth2', [
