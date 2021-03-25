@@ -4,6 +4,7 @@
     "type": "project",
     "require": {
         "php": "^7.4",
+        "ext-json": "*",
         "guzzlehttp/guzzle": "7.0",
         "vlucas/phpdotenv": "^5.3",
         "josantonius/session": "^1.1"
