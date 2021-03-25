@@ -46,3 +46,15 @@ if (! function_exists('set_token')) {
         ]);
     }
 }
+
+if (! function_exists('get_access_token')) {
+    /**
+     * Get the access token.
+     *
+     * @return string
+     */
+    function get_access_token(): string
+    {
+        return Session::get('oauth2')['access_token'];
+    }
+}
