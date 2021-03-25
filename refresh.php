@@ -14,7 +14,7 @@ if (Session::get('oauth2') === null) {
 $client = new Client();
 
 try {
-    $response = $client->post($_ENV['API_HOST'].'/token', [
+    $response = $client->post($_ENV['API_HOST'].'/oauth/token', [
         'form_params' => [
             'grant_type' => 'refresh_token',
             'refresh_token' => get_refresh_token(),

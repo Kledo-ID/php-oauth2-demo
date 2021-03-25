@@ -16,7 +16,7 @@ $query = http_build_query([
     'state' => $state,
 ]);
 
-$authorizationUrl = $_ENV['API_HOST'].'/authorize?'.$query;
+$authorizationUrl = $_ENV['API_HOST'].'/oauth/authorize?'.$query;
 
 header('Location: '.$authorizationUrl);
 

@@ -11,7 +11,7 @@ if (isset($_GET['state']) && $state === $_GET['state']) {
     $client = new Client();
 
     try {
-        $response = $client->post($_ENV['API_HOST'].'/token', [
+        $response = $client->post($_ENV['API_HOST'].'/oauth/token', [
             'form_params' => [
                 'grant_type' => 'authorization_code',
                 'client_id' => $_ENV['CLIENT_ID'],
