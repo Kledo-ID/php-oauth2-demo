@@ -36,7 +36,7 @@ if (! function_exists('set_token')) {
      * @param  string  $expiresIn
      * @return void
      */
-    function set_token($tokenType, $accessToken, $refreshToken, $expiresIn)
+    function set_token(string $tokenType, string $accessToken, string $refreshToken, string $expiresIn): void
     {
         Session::set('oauth2', [
             'token_type' => $tokenType,
