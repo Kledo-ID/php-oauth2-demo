@@ -18,7 +18,7 @@
                             Kledo OAuth2 App
                         </div>
                         <div class="card-body d-flex justify-content-center">
-                            <a href="#" class="btn btn-primary">Connect to Kledo</a>
+                            <a href="authorization.php" class="btn btn-primary">Connect to Kledo</a>
                         </div>
                     </div>
                 </div>
