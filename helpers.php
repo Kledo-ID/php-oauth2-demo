@@ -58,3 +58,15 @@ if (! function_exists('get_access_token')) {
         return Session::get('oauth2')['access_token'];
     }
 }
+
+if (! function_exists('get_refresh_token')) {
+    /**
+     * Get the refresh token.
+     *
+     * @return string
+     */
+    function get_refresh_token(): string
+    {
+        return Session::get('oauth2')['refresh_token'];
+    }
+}
