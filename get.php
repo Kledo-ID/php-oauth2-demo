@@ -127,6 +127,28 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="card">
+                            <div class="card-header" id="headingFinanceAccountDelete">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#financeAccountDelete" aria-expanded="true" aria-controls="financeAccountDelete">
+                                        Delete - Finance Account
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="financeAccountDelete" class="collapse <?php is_collapsed('account-delete'); ?>" aria-labelledby="headingFinanceAccountDelete" data-parent="#accordion">
+                                <div class="card-body">
+                                    <?php
+                                        if (isset($_GET['request']) && $_GET['request'] === 'account-delete') {
+                                            include 'request/accounts/delete.php';
+                                        } else {
+                                            include 'demo/accounts/delete.php';
+                                        }
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
