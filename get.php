@@ -105,6 +105,28 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="card">
+                            <div class="card-header" id="headingFinanceAccountUpdate">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#financeAccountUpdate" aria-expanded="true" aria-controls="financeAccountUpdate">
+                                        PUT - Finance Account
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="financeAccountUpdate" class="collapse <?php is_collapsed('account-update'); ?>" aria-labelledby="headingFinanceAccountUpdate" data-parent="#accordion">
+                                <div class="card-body">
+                                    <?php
+                                        if (isset($_GET['request']) && $_GET['request'] === 'account-update') {
+                                            include 'request/accounts/update.php';
+                                        } else {
+                                            include 'demo/accounts/update.php';
+                                        }
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
