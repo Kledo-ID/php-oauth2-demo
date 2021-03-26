@@ -70,3 +70,16 @@ if (! function_exists('get_refresh_token')) {
         return Session::get('oauth2')['refresh_token'];
     }
 }
+
+if (! function_exists('is_collapsed')) {
+    function is_collapsed($key)
+    {
+        if ((isset($_GET['request']) && $_GET['request'] === $key)
+            || (isset($_GET['code']) && $_GET['code'] === $key)
+        ) {
+            echo 'show';
+        }
+
+        echo '';
+    }
+}
