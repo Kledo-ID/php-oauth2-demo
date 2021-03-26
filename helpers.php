@@ -83,3 +83,10 @@ if (! function_exists('is_collapsed')) {
         echo '';
     }
 }
+
+if (! function_exists('json_pretty')) {
+    function json_pretty($response)
+    {
+        return json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+    }
+}
